@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Extension-Name: goo
+Class-Manager: org.nlogo.extensions.goo.GooExtension
+NetLogo-Extension-API-Version: 5.0
