@@ -2,7 +2,7 @@
 
 This extension lets you manipulate the GUI widgets in NetLogo's Interface tab.  "GUI", hence "Goo".
 
-## Use
+## Usage
 
 The provided primitives are:
 
