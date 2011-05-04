@@ -4,9 +4,10 @@ This extension lets you manipulate the GUI widgets in NetLogo's Interface tab.  
 
 ## Building
 
-Use the NETLOGO environment variable to tell the Makefile which NetLogo.jar to compile against.  For example:
+Use the NETLOGO environment variable to point to your NetLogo directory (containing NetLogo.jar)
+and SCALA_HOME to point to your Scala 2.8.1 installation:
 
-    NETLOGO=/Applications/NetLogo\\\ 5.0beta2 make
+    NETLOGO=/Applications/NetLogo\\\ 5.0beta2 SCALA_HOME=/usr/local/scala-2.8.1.final make
 
 If compilation succeeds, `goo.jar` will be created.
 
