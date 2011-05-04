@@ -5,6 +5,7 @@ This extension lets you manipulate the GUI widgets in NetLogo's Interface tab.  
 ## Use
 
 The provided primitives are:
+
  * `goo:chooser-items` (reporter)
  * `goo:set-chooser-items` (command)
 
