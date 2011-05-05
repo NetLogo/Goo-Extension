@@ -2,17 +2,34 @@
 
 This extension lets you manipulate the GUI widgets in NetLogo's Interface tab.  "GUI", hence "Goo".
 
+This version of the extension requires NetLogo 5.0beta2.
+
+## Development status
+
+Preliminary.  Possible shortcomings include:
+
+ * Do all primitives work with all widget types?  Don't know, hasn't been tested.
+ * The format of the strings you pass to `goo:add` isn't documented yet. You can grab examples from any NetLogo model file.
+ * ...?
+
 ## Usage
+
+At the moment, for this to work you need to replace the `scala-library.jar` file in the lib directory of your NetLogo application directory with the `scala-library.jar` file from Scala 2.8.1.  We'll fix this for NetLogo 5.0beta3.
 
 The provided primitives are:
 
+ * `goo:show name` (command)
+ * `goo:hide name` (command)
+ * `goo:move name x-offset y-offset` (command)
+ * `goo:add spec` (command)
  * `goo:chooser-items` (reporter)
  * `goo:set-chooser-items` (command)
 
+All of these are demonstrated in the included "Goo Tester" model.
+
 ## Building
 
-Use the NETLOGO environment variable to point to your NetLogo directory (containing NetLogo.jar)
-and SCALA_HOME to point to your Scala 2.8.1 installation:
+Use the NETLOGO environment variable to point to your NetLogo directory (containing NetLogo.jar) and SCALA_HOME to point to your Scala 2.8.1 installation.  For example:
 
     NETLOGO=/Applications/NetLogo\\\ 5.0beta2 SCALA_HOME=/usr/local/scala-2.8.1.final make
 
