@@ -8,9 +8,14 @@ endif
 
 SRCS=$(wildcard src/*.scala)
 
-include config.mk
-
-$(NAME).jar: $(SRCS) $(EXTERNAL_JARS) manifest.txt Makefile
+goo.jar: $(SRCS) manifest.txt
 	mkdir -p classes
 	$(SCALA_HOME)/bin/scalac -g -deprecation -unchecked -encoding us-ascii -classpath $(NETLOGO)/NetLogo.jar:$(JARS) -d classes $(SRCS)
-	jar cmf manifest.txt $(NAME).jar -C classes .
+	jar cmf manifest.txt goo.jar -C classes .
+
+goo.zip: goo.jar
+	rm -rf goo
+	mkdir goo
+	cp -rp goo.jar README.md Goo\ Tester.nlogo Makefile src manifest.txt goo
+	zip -rv goo.zip goo
+	rm -rf goo
