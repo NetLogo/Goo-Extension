@@ -33,6 +33,8 @@ All of these are demonstrated in the included "Goo Tester" model.
 
 ## Building
 
+The extension is written in Scala (version 2.8.1).
+
 Use the NETLOGO environment variable to point to your NetLogo directory (containing NetLogo.jar) and SCALA_HOME to point to your Scala 2.8.1 installation.  For example:
 
     NETLOGO=/Applications/NetLogo\\\ 5.0beta2 SCALA_HOME=/usr/local/scala-2.8.1.final make
