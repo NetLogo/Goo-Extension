@@ -20,11 +20,13 @@ import org.nlogo.api.{ Argument, Context, DefaultClassManager, DefaultCommand, D
 import org.nlogo.app.{ WidgetPanel, WidgetWrapper }
 import org.nlogo.nvm.ExtensionContext
 import org.nlogo.window.{ ChooserWidget, GUIWorkspace, Widget }
+import org.nlogo.window.Events.CompileAllEvent
 
 class GooExtension extends DefaultClassManager {
   
   def load(pm: PrimitiveManager) {
-    pm.addPrimitive("add", new MakeWidget)
+    pm.addPrimitive("recompile", new Recompile)
+    pm.addPrimitive("add", new AddWidget)
     pm.addPrimitive("show", new ShowWidget)
     pm.addPrimitive("hide", new HideWidget)
     pm.addPrimitive("move", new MoveWidget)
@@ -63,7 +65,16 @@ trait Helpers {
       })
 }
 
-class MakeWidget extends DefaultCommand with Helpers {
+class Recompile extends DefaultCommand with Helpers {
+  override def getSyntax = Syntax.commandSyntax
+  def perform(args: Array[Argument], context: Context) {
+    invokeLater {
+      (new CompileAllEvent).raise(workspace(context))
+    }
+  }
+}
+
+class AddWidget extends DefaultCommand with Helpers {
   override def getSyntax =
     Syntax.commandSyntax(Array(Syntax.TYPE_STRING))
   def perform(args: Array[Argument], context: Context) {

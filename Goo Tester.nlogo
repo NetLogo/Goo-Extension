@@ -179,7 +179,7 @@ BUTTON
 723
 392
 NIL
-goo:add \"BUTTON\\n10\\n40\\n90\\n80\\nbeep\\nbeep\\nNIL\\n1\\nT\\nOBSERVER\\nNIL\\nNIL\\nNIL\\nNIL\\n1\"\n\n
+goo:add \"BUTTON\\n10\\n40\\n90\\n80\\nbeep\\nbeep\\nNIL\\n1\\nT\\nOBSERVER\\nNIL\\nNIL\\nNIL\\nNIL\\n1\"\ngoo:recompile
 NIL
 1
 T

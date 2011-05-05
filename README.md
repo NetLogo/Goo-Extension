@@ -6,10 +6,11 @@ This version of the extension requires (exactly) NetLogo 5.0beta2.
 
 ## Development status
 
-Preliminary.  Possible shortcomings include:
+Preliminary.  Known shortcomings include:
 
  * Do all primitives work with all widget types?  Don't know, hasn't been tested.
  * The format of the strings you pass to `goo:add` isn't documented yet. You can grab examples from any NetLogo model file.
+ * `goo:add` requires a `goo:recompile` afterwards for at least some widget types (buttons yes, notes no). This could be improved.
  * ...?
 
 ## Usage
@@ -22,6 +23,7 @@ The provided primitives are:
  * `goo:hide name` (command)
  * `goo:move name x-offset y-offset` (command)
  * `goo:add spec` (command)
+ * `goo:recompile` (command) --- as a side effect, halts the model
  * `goo:chooser-items` (reporter)
  * `goo:set-chooser-items` (command)
 
