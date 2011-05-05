@@ -4,6 +4,8 @@ This extension lets you manipulate the GUI widgets in NetLogo's Interface tab.  
 
 This version of the extension requires (exactly) NetLogo 5.0beta2.
 
+See the "Downloads" link here on GitHub for a zip archive you can download.
+
 ## Development status
 
 Preliminary.  Known shortcomings include:
