@@ -2,7 +2,7 @@
 
 This extension lets you manipulate the GUI widgets in NetLogo's Interface tab.  "GUI", hence "Goo".
 
-This version of the extension requires NetLogo 5.0beta2.
+This version of the extension requires (exactly) NetLogo 5.0beta2.
 
 ## Development status
 
@@ -14,7 +14,7 @@ Preliminary.  Possible shortcomings include:
 
 ## Usage
 
-At the moment, for this to work you need to replace the `scala-library.jar` file in the lib directory of your NetLogo application directory with the `scala-library.jar` file from Scala 2.8.1.  We'll fix this for NetLogo 5.0beta3.
+We'll fix this for NetLogo 5.0beta3, but at the moment, for this to work you need to replace the `scala-library.jar` file in the lib directory of your NetLogo application directory with the `scala-library.jar` file from Scala 2.8.1.  You can copy it from your Scala 2.8.1 installation, or grab it from this URL: `http://scala-tools.org/repo-releases/org/scala-lang/scala-library/2.8.1/scala-library-2.8.1.jar`
 
 The provided primitives are:
 
