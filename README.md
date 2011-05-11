@@ -10,8 +10,8 @@ You can download a pre-built snapshot of the extension here: https://github.com/
 
 Preliminary.  Known shortcomings include:
 
+ * For now, requires the full app (not applet or embedding) because it uses org.nlogo.app stuff.  (It's fixable, but not trivially.)
  * Do all primitives work with all widget types?  Don't know, haven't tested.
- * Does it work with applets and embedding, or only in the full app?  Don't know, haven't tested.
  * The format of the strings you pass to `goo:add` isn't documented yet. You can grab examples from any NetLogo model file.
  * `goo:add` requires a `goo:recompile` afterwards for at least some widget types (buttons yes, notes no). This could be improved.
  * ...?
