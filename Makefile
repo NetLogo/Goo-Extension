@@ -10,7 +10,7 @@ SRCS=$(wildcard src/*.scala)
 
 goo.jar: $(SRCS) manifest.txt
 	mkdir -p classes
-	$(SCALA_HOME)/bin/scalac -g -deprecation -unchecked -encoding us-ascii -classpath $(NETLOGO)/NetLogo.jar:$(JARS) -d classes $(SRCS)
+	$(SCALA_HOME)/bin/scalac -deprecation -unchecked -encoding us-ascii -classpath $(NETLOGO)/NetLogo.jar:$(JARS) -d classes $(SRCS)
 	jar cmf manifest.txt goo.jar -C classes .
 
 goo.zip: goo.jar
