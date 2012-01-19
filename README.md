@@ -1,10 +1,10 @@
 # NetLogo Goo extension
 
-This extension lets you manipulate the GUI widgets in NetLogo's Interface tab.  "GUI", hence "Goo".
+This experimental, unsupported extension lets you manipulate the GUI widgets in NetLogo's Interface tab.  "GUI", hence "Goo".
 
-This version of the extension requires (exactly) NetLogo 5.0beta3.
+NetLogo 5.0 is required.
 
-You can download a pre-built snapshot of the extension here: https://github.com/downloads/NetLogo/Goo-Extension/goo.zip
+You can download a snapshot of the extension here: https://github.com/NetLogo/Goo-Extension/downloads
 
 ## Development status
 
@@ -32,11 +32,11 @@ All of these are demonstrated in the included "Goo Tester" model.
 
 ## Building
 
-The extension is written in Scala (version 2.9.0.1).
+The extension is written in Scala (version 2.9.1).
 
-Use the NETLOGO environment variable to point to your NetLogo directory (containing NetLogo.jar) and SCALA_HOME to point to your Scala 2.9.0.1 installation.  For example:
+Use the NETLOGO environment variable to point to your NetLogo directory (containing NetLogo.jar) and SCALA_HOME to point to your Scala 2.9.1 installation.  For example:
 
-    NETLOGO=/Applications/NetLogo\\\ 5.0beta3 SCALA_HOME=/usr/local/scala-2.9.0.1 make
+    NETLOGO=/Applications/NetLogo\\\ 5.0 SCALA_HOME=/usr/local/scala-2.9.1.final make
 
 If compilation succeeds, `goo.jar` will be created.
 

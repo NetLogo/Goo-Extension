@@ -76,7 +76,7 @@ class Recompile extends DefaultCommand with Helpers {
 
 class AddWidget extends DefaultCommand with Helpers {
   override def getSyntax =
-    Syntax.commandSyntax(Array(Syntax.TYPE_STRING))
+    Syntax.commandSyntax(Array(Syntax.StringType))
   def perform(args: Array[Argument], context: Context) {
     val spec = args(0).getString
     invokeLater {
@@ -88,7 +88,7 @@ class AddWidget extends DefaultCommand with Helpers {
 
 class ShowWidget extends DefaultCommand with Helpers {
   override def getSyntax =
-    Syntax.commandSyntax(Array(Syntax.TYPE_STRING))
+    Syntax.commandSyntax(Array(Syntax.StringType))
   def perform(args: Array[Argument], context: Context) {
     val name = args(0).getString
     invokeLater {
@@ -100,7 +100,7 @@ class ShowWidget extends DefaultCommand with Helpers {
 
 class HideWidget extends DefaultCommand with Helpers {
   override def getSyntax =
-    Syntax.commandSyntax(Array(Syntax.TYPE_STRING))
+    Syntax.commandSyntax(Array(Syntax.StringType))
   def perform(args: Array[Argument], context: Context) {
     val name = args(0).getString
     invokeLater {
@@ -112,9 +112,9 @@ class HideWidget extends DefaultCommand with Helpers {
 
 class MoveWidget extends DefaultCommand with Helpers {
   override def getSyntax =
-    Syntax.commandSyntax(Array(Syntax.TYPE_STRING,
-                               Syntax.TYPE_NUMBER,
-                               Syntax.TYPE_NUMBER))
+    Syntax.commandSyntax(Array(Syntax.StringType,
+                               Syntax.NumberType,
+                               Syntax.NumberType))
   def perform(args: Array[Argument], context: Context) {
     val (name, xOffset, yOffset) =
       (args(0).getString, args(1).getIntValue, args(2).getIntValue)
@@ -130,8 +130,8 @@ class MoveWidget extends DefaultCommand with Helpers {
 
 class GetChooserItems extends DefaultReporter with Helpers {
   override def getSyntax = 
-    Syntax.reporterSyntax(Array(Syntax.TYPE_STRING),
-                          Syntax.TYPE_LIST)
+    Syntax.reporterSyntax(Array(Syntax.StringType),
+                          Syntax.ListType)
   def report(args: Array[Argument], context: Context) = {
     val name = args(0).getString
     invokeAndWait(context)(chooserNamed(context, name)) match {
@@ -145,8 +145,8 @@ class GetChooserItems extends DefaultReporter with Helpers {
 
 class SetChooserItems extends DefaultCommand with Helpers {
   override def getSyntax =
-    Syntax.commandSyntax(Array(Syntax.TYPE_STRING,
-                               Syntax.TYPE_LIST))
+    Syntax.commandSyntax(Array(Syntax.StringType,
+                               Syntax.ListType))
   def perform(args: Array[Argument], context: Context) {
     val name = args(0).getString
     for(chooser <- invokeAndWait(context)(chooserNamed(context, name))) {
