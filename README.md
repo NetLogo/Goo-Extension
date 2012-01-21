@@ -4,7 +4,7 @@ This experimental, unsupported extension lets you manipulate the GUI widgets in 
 
 NetLogo 5.0 is required.
 
-You can download a snapshot of the extension here: https://github.com/NetLogo/Goo-Extension/downloads
+You can download a snapshot of the extension from the "download packages" section at the bottom of https://github.com/NetLogo/Goo-Extension/downloads.
 
 ## Development status
 
