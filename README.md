@@ -12,7 +12,6 @@ Preliminary.  Known shortcomings include:
 
  * For now, requires the full app (not applet or embedding) because it uses org.nlogo.app stuff.  (It's fixable, but not trivially.)
  * Do all primitives work with all widget types?  Don't know, haven't tested.
- * The format of the strings you pass to `goo:add` isn't documented yet. You can grab examples from any NetLogo model file.
  * `goo:add` requires a `goo:recompile` afterwards for at least some widget types (buttons yes, notes no). This could be improved.
  * ...?
 
@@ -29,6 +28,8 @@ The provided primitives are:
  * `goo:set-chooser-items` (command)
 
 All of these are demonstrated in the included "Goo Tester" model.
+
+See https://github.com/NetLogo/NetLogo/wiki/Model-file-format for documentation on the format of the strings that `goo:add` expects.
 
 ## Building
 
