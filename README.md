@@ -35,11 +35,11 @@ See https://github.com/NetLogo/NetLogo/wiki/Model-file-format for documentation 
 
 ## Building
 
-The extension is written in Scala (version 2.9.1).
+The extension is written in Scala (version 2.9).
 
-Use the NETLOGO environment variable to point to your NetLogo directory (containing NetLogo.jar) and SCALA_HOME to point to your Scala 2.9.1 installation.  For example:
+Use the NETLOGO environment variable to point to your NetLogo directory (containing NetLogo.jar) and SCALA_HOME to point to your Scala 2.9 installation.  For example:
 
-    NETLOGO=/Applications/NetLogo\\\ 5.0 SCALA_HOME=/usr/local/scala-2.9.1.final make
+    NETLOGO=/Applications/NetLogo\\\ 5.0 SCALA_HOME=/usr/local/scala-2.9.3 make
 
 If compilation succeeds, `goo.jar` will be created.
 
