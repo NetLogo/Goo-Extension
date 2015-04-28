@@ -2,7 +2,7 @@
 
 This experimental, unsupported extension lets you manipulate the GUI widgets in NetLogo's Interface tab.  "GUI", hence "Goo".
 
-NetLogo 5.0 is required.
+NetLogo 5.x is required.
 
 You can download a snapshot of the extension from https://github.com/downloads/NetLogo/Goo-Extension/goo-20120119.zip
 
@@ -14,6 +14,8 @@ Preliminary.  Known shortcomings include:
  * Do all primitives work with all widget types?  Don't know, haven't tested.
  * `goo:add` requires a `goo:recompile` afterwards for at least some widget types (buttons yes, notes no). This could be improved.
  * ...?
+
+For something more recent and more advanced, but also still under development, check out https://github.com/CRESS-Surrey/eXtraWidgets.
 
 ## Usage
 
